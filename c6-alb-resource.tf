@@ -7,7 +7,7 @@ resource "aws_lb" "test" {
   security_groups    = [aws_security_group.Demo-alb.id]
   subnets            = [for subnet in aws_subnet.Demo-pub-subnet : subnet.id]
 
-  enable_deletion_protection = true
+  enable_deletion_protection = false
 
   tags = {
     "Name": "Custom-alb"
