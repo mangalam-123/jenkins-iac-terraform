@@ -3,7 +3,7 @@
 resource "aws_route53_record" "myapp" {
   
   depends_on = [
-    aws_alb.London-alb
+    aws_alb.test
   ]
 
   zone_id = data.aws_route53_zone.mydomain.zone_id
@@ -11,8 +11,8 @@ resource "aws_route53_record" "myapp" {
   type = "A"
 
   alias {
-    name = aws_alb.London-alb.dns_name
-    zone_id = aws_alb.London-alb.zone_id
+    name = aws_alb.test.dns_name
+    zone_id = aws_alb.test.zone_id
     evaluate_target_health = true
   }
 }
