@@ -9,8 +9,8 @@ terraform{
     }
 
     backend "s3" {
-      bucket = "my-terraform-bucket-sample"
-      key = "terraform-tfstate-file/terraform.tfstate"
+      bucket = "terraform-bucket2701"
+      key = "terraform-tfstates/terraform.tfstate"
       region = "us-east-1"
       dynamodb_table = "terraform_table"
     }
