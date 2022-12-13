@@ -11,7 +11,7 @@ terraform{
     backend "s3" {
       bucket = "my-terraform-bucket-sample"
       key = "terraform-tfstate-file/terraform.tfstate"
-      region = "us-east-2"
+      region = "us-east-1"
       dynamodb_table = "terraform_table"
     }
 }
